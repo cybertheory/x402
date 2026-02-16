@@ -1,0 +1,34 @@
+name = "x402-facilitator"
+main = "worker.js"
+compatibility_date = "2025-12-20"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+
+# Route the custom subdomain to this worker:
+routes = [
+  { pattern = "facilitator.x402instant.com/*", zone_name = "x402instant.com" }
+]
+
+[vars]
+# Provide at least one RPC URL. If BASE_SEPOLIA_RPC_URL is omitted, base-sepolia won't be advertised.
+BASE_RPC_URL = "https://base-mainnet.g.alchemy.com/v2/rJblk6O7T68DUCTvTil5L"
+BASE_SEPOLIA_RPC_URL = "https://base-sepolia.g.alchemy.com/v2/rJblk6O7T68DUCTvTil5L"
+
+DEBUG_LOG = 1
+
+# Relayer address (settlement submitter) — private key stored as CF secret RELAYER_PRIVATE_KEY
+# Fund this address with a small amount of ETH on Base for gas
+RELAYER_ADDRESS = "0xa8E586D1563c23E73471A5618EbEbda8881B3e93"
+
+# Optional: override supported kinds (otherwise it infers from which RPC vars are set)
+# SUPPORTED_KINDS_JSON = '[{"x402Version":1,"scheme":"exact","network":"base"}]'
+
+# Optional: simple bearer auth for your facilitator endpoints
+# FACILITATOR_AUTH_TOKEN = "some-long-random-string"
+
+[observability]
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+persist = true

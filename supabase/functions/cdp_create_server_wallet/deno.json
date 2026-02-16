@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "@coinbase/cdp-sdk": "npm:@coinbase/cdp-sdk"
+  }
+}
+
+

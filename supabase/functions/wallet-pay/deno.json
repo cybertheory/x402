@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "viem": "npm:viem",
+    "viem/chains": "npm:viem/chains",
+    "@coinbase/cdp-sdk": "npm:@coinbase/cdp-sdk",
+    "@x402/core/client": "npm:@x402/core/client",
+    "@x402/core/http": "npm:@x402/core/http",
+    "@x402/evm/exact/client": "npm:@x402/evm/exact/client"
+  }
+}
+
+

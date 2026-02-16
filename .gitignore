@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.hardhat-temp/
+.env*
+!env.example
+*.log
+.DS_Store
+nul

@@ -1,0 +1,30 @@
+{
+  "name": "x402instant",
+  "version": "0.1.0",
+  "description": "TypeScript client library for x402Instant with automatic payment handling",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "x402",
+    "payment",
+    "crypto",
+    "web3"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.0",
+    "@x402/core": "^2.0.0",
+    "@x402/evm": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}
+
+

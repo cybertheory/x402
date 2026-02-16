@@ -1,0 +1,35 @@
+name = "plain-paper-6225"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV Namespaces - Add your actual namespace IDs here
+[[kv_namespaces]]
+binding = "TENANTS"
+id = "15ccc76818f944538704fce08afa34c6"
+
+[[kv_namespaces]]
+binding = "NONCES"
+id = "ae62e8d729c74d5d9326a3baa19b2178"
+
+# Note: Secrets should be set via wrangler secret put:
+#
+# CDP Facilitator (for "exact" scheme):
+# wrangler secret put CDP_API_KEY_ID
+# wrangler secret put CDP_API_KEY_SECRET
+# 
+# Thirdweb Facilitator (for "upto" scheme):
+# wrangler secret put THIRDWEB_SECRET_KEY
+# (Server wallet uses payTo from route config, like CDP)
+#
+# Or pipe the values:
+# echo "your-api-key-id" | wrangler secret put CDP_API_KEY_ID
+# echo "your-api-key-secret" | wrangler secret put CDP_API_KEY_SECRET
+# echo "your-thirdweb-secret" | wrangler secret put THIRDWEB_SECRET_KEY
+
+[observability]
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+persist = true
